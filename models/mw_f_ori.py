@@ -7,10 +7,23 @@ from models.pred_layer import Pred_Layer
 
 
 class Mw_f_ori(nn.Module): # param: 16821760
-    def __init__(self, vocab_size, embedding_size, encoder_size, drop_out=0.2,option=None): # FIXME
+    def __init__(self, options,embedding): # FIXME
         super(Mw_f_ori, self).__init__()
-        self.drop_out=drop_out
-        self.embedding = nn.Embedding(vocab_size + 1, embedding_dim=embedding_size)
+        self.drop_out = options["dropout"]
+        self.opts = options
+        vocab_size = self.opts["vocab_size"]
+        encoder_size = self.opts["hidden_size"]
+        if embedding is None:
+            embedding_size = options["emb_size"]
+            self.embedding = nn.Embedding(vocab_size + 1, embedding_dim=embedding_size)
+            initrange = 0.1
+            nn.init.uniform_(self.embedding.weight, -initrange, initrange)  # embedding初始化为-0.1~0.1之间
+            # #print("embedding initialized")
+        else:
+            embedding_size = np.shape(embedding)[1]  # (vocab_size,embedding_dim)
+            self.embedding = nn.Embedding(vocab_size + 1, embedding_dim=embedding_size)
+            self.embedding.from_pretrained(embedding, freeze=False)  # TODO:斟酌一下要不要freeze
+
         self.q_encoder = nn.GRU(input_size=embedding_size, hidden_size=encoder_size, batch_first=True,
                                 bidirectional=True)
         self.p_encoder = nn.GRU(input_size=embedding_size, hidden_size=encoder_size, batch_first=True,
