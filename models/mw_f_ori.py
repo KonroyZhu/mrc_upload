@@ -1,3 +1,5 @@
+from collections import Counter
+
 import numpy as np
 import torch
 from torch import nn
@@ -83,14 +85,13 @@ class Mw_f_ori(nn.Module): # param: 16821760
         self.initiation()
 
     def initiation(self):
-        initrange = 0.1
-        nn.init.uniform_(self.embedding.weight, -initrange, initrange) # embedding初始化为-0.1~0.1之间
         for module in self.modules():
             if isinstance(module, nn.Linear): # 用0.1来限制，初始化所有nn.Linear的权重
+                print("initializing Linear:", module)
                 nn.init.xavier_uniform_(module.weight, 0.1)
 
     def forward(self, inputs):
-        [query, passage, answer, is_train] = inputs
+        [query, passage, answer, ids, is_train, is_argmax] = inputs
         # Embedding
         q_embedding = self.embedding(query)
         p_embedding = self.embedding(passage)
@@ -179,7 +180,15 @@ class Mw_f_ori(nn.Module): # param: 16821760
         # MLP
         encoder_output = F.dropout(F.leaky_relu(self.prediction(rp)),self.drop_out)  # (b,1,d)
         score = F.softmax(a_embedding.bmm(encoder_output.transpose(2, 1)).squeeze(), 1)  # (b,3,h) (b,h,1) -> (b,3)
+
+        _score = np.around(score.cpu().detach().numpy(), decimals=2)
+        print("score sample: {} {}".format(_score[0], _score[1]))
+        print("batch score: {}".format(Counter(score.argmax(1).cpu().data.numpy())[0] / self.opts["batch"]))
         if not is_train:
-            return score.argmax(1)
+            if is_argmax:
+                return score.argmax(1)
+            else:
+                return score
         loss = -torch.log(score[:, 0]).mean()
         return loss
+

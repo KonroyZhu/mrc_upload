@@ -26,16 +26,16 @@ class DCN(nn.Module):  # param: 16821760
 
         self.a_encoder = nn.LSTM(input_size=embedding_size, hidden_size=int(encoder_size / 2), batch_first=True,
                                  bias=False,bidirectional=True)
-        self.q_encoder = nn.LSTM(input_size=embedding_size, hidden_size=encoder_size, batch_first=True,
+        self.q_encoder = nn.LSTM(input_size=embedding_size, hidden_size=encoder_size, batch_first=True,bidirectional=True,
                                  bias=False)
-        self.d_encoder = nn.LSTM(input_size=embedding_size, hidden_size=encoder_size, batch_first=True,
+        self.d_encoder = nn.LSTM(input_size=embedding_size, hidden_size=encoder_size, batch_first=True,bidirectional=True,
                                        bias=False)
 
         self.a_attention = nn.Linear(embedding_size, 1, bias=False)
 
-        self.W_Q = nn.Linear(encoder_size, encoder_size, bias=True)
+        self.W_Q = nn.Linear(2*encoder_size, 2*encoder_size, bias=True)
 
-        self.U_lstm = nn.LSTM(input_size=4*encoder_size,hidden_size=encoder_size,batch_first=True,bidirectional=True,bias=False)
+        self.U_lstm = nn.LSTM(input_size=8*encoder_size,hidden_size=encoder_size,batch_first=True,bidirectional=True,bias=False)
 
         """
         prediction layer
@@ -51,10 +51,9 @@ class DCN(nn.Module):  # param: 16821760
         self.initiation()
 
     def initiation(self):
-        initrange = 0.1
-        nn.init.uniform_(self.embedding.weight, -initrange, initrange)  # embedding初始化为-0.1~0.1之间
         for module in self.modules():
-            if isinstance(module, nn.Linear):  # 用0.1来限制，初始化所有nn.Linear的权重
+            if isinstance(module, nn.Linear): # 用0.1来限制，初始化所有nn.Linear的权重
+                print("initializing Linear:", module)
                 nn.init.xavier_uniform_(module.weight, 0.1)
 
     def forward(self, inputs):
@@ -63,6 +62,7 @@ class DCN(nn.Module):  # param: 16821760
         q_emb = self.embedding(query)
         d_emb = self.embedding(passage)
         a_emb = self.embedding(answer)
+
         # Layer1: Encoding Layer
         # Encoding a
         a_embedding, _ = self.a_encoder(a_emb.view(-1, a_emb.size(2), a_emb.size(3)))  # （3b,a,h)
@@ -73,11 +73,10 @@ class DCN(nn.Module):  # param: 16821760
         #   DYNAMIC COATTENTION NETWORKS
         #   1 DOCUMENT AND QUESTION ENCODER
         Q_, _ = self.q_encoder(q_emb)
-        Q_ = F.dropout(Q_, self.drop_out)  # (b,q,h)
+        Q_ = F.dropout(Q_, self.drop_out)  # (b,q,2h)
         Q = F.tanh(self.W_Q(Q_))
-
         D, _ = self.d_encoder(d_emb)
-        D = F.dropout(D, self.drop_out)  # (b,d,h)
+        D = F.dropout(D, self.drop_out)  # (b,d,2h)
 
         #   2 COATTENTION ENCODER
         L = D.bmm(Q.transpose(2, 1))  # (b,d,h) bmm (b,h,q)

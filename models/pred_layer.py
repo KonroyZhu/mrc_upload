@@ -8,7 +8,7 @@ from torch.nn import functional as F
 
 class Pred_Layer(nn.Module):
     def __init__(self,opts,max_margin=False):
-        super(Pred_Layer,self).__init__()
+        super().__init__()
         self.opts=opts
         self.max_margin = max_margin
         self.Wq = nn.Linear(2 * opts["hidden_size"], opts["hidden_size"], bias=False)
@@ -17,14 +17,9 @@ class Pred_Layer(nn.Module):
         self.Wp2 = nn.Linear(2 * opts["hidden_size"], opts["hidden_size"], bias=False)
         self.vp = nn.Linear(opts["hidden_size"], 1, bias=False)
         self.prediction = nn.Linear(2 * opts["hidden_size"], opts["emb_size"], bias=False)
-        self.initiation()
 
-    def initiation(self):
-        for module in self.modules():
-            if isinstance(module, nn.Linear):  # 用0.1来限制，初始化所有nn.Linear的权重
-                nn.init.xavier_uniform_(module.weight, 0.1)
 
-    def forward(self, q_encoder,aggregation,a_embedding,is_train=True,is_argmax=True,print_score=False):
+    def forward(self, q_encoder,aggregation,a_embedding,is_train=True,is_argmax=True,print_score=True):
         # q_encoder: (b,q,2h)
         # aggregation: (b,p,2h)
         # a_embedding: (b,3,h)
