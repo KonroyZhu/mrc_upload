@@ -20,7 +20,7 @@ class MwAN_full(nn.Module): # param: 16821760
         else:
             embedding_size = np.shape(embedding)[1]  # (vocab_size,embedding_dim)
             self.embedding = nn.Embedding(vocab_size + 1, embedding_dim=embedding_size)
-            self.embedding.from_pretrained(embedding, freeze=False)  # TODO:斟酌一下要不要freeze
+            self.embedding.from_pretrained(embedding, freeze=True)  # TODO:斟酌一下要不要freeze
 
         self.q_encoder = nn.GRU(input_size=self.opts["emb_size"], hidden_size=self.opts["hidden_size"], batch_first=True,
                                 bidirectional=True)

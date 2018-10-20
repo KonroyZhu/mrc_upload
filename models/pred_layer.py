@@ -19,7 +19,7 @@ class Pred_Layer(nn.Module):
         self.prediction = nn.Linear(2 * opts["hidden_size"], opts["emb_size"], bias=False)
 
 
-    def forward(self, q_encoder,aggregation,a_embedding,is_train=True,is_argmax=True,print_score=True):
+    def forward(self, q_encoder,aggregation,a_embedding,is_train=True,is_argmax=True,print_score=False):
         # q_encoder: (b,q,2h)
         # aggregation: (b,p,2h)
         # a_embedding: (b,3,h)
@@ -31,6 +31,8 @@ class Pred_Layer(nn.Module):
         # MLP
         encoder_output = F.dropout(F.leaky_relu(self.prediction(rp)), self.opts["dropout"])  # (b,1,d)
         score = F.softmax(a_embedding.bmm(encoder_output.transpose(2, 1)).squeeze(), 1)  # (b,3,h) (b,h,1) -> (b,3)
+        if "nan" in str(score):
+            print("nan !!")
         if print_score:
             _score = np.around(score.cpu().detach().numpy(), decimals=2)
             print("score sample: {} {}".format(_score[0], _score[1]))

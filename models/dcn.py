@@ -24,7 +24,7 @@ class DCN(nn.Module):  # param: 16821760
             self.embedding = nn.Embedding(vocab_size + 1, embedding_dim=embedding_size)
             self.embedding.from_pretrained(embedding, freeze=False)  # TODO:斟酌一下要不要freeze
 
-        self.a_encoder = nn.LSTM(input_size=embedding_size, hidden_size=int(encoder_size / 2), batch_first=True,
+        self.a_encoder = nn.LSTM(input_size=embedding_size, hidden_size=int(embedding_size / 2), batch_first=True,
                                  bias=False,bidirectional=True)
         self.q_encoder = nn.LSTM(input_size=embedding_size, hidden_size=encoder_size, batch_first=True,bidirectional=True,
                                  bias=False)
