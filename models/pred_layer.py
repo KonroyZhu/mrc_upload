@@ -19,7 +19,7 @@ class Pred_Layer(nn.Module):
         self.prediction = nn.Linear(2 * opts["hidden_size"], opts["emb_size"], bias=False)
 
 
-    def forward(self, q_encoder,aggregation,a_embedding,is_train=True,is_argmax=True,print_score=False):
+    def forward(self, q_encoder,aggregation,a_embedding,is_train=True,is_argmax=True,print_score=True):
         # q_encoder: (b,q,2h)
         # aggregation: (b,p,2h)
         # a_embedding: (b,3,h)

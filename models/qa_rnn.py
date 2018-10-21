@@ -135,6 +135,8 @@ class QA_RNN(nn.Module):
             M1 = enc(M1)
         M2 = M1
         # print("M2",M2)
-
+        print(M2)
+        print(Q)
+        print(a_embedding)
         loss = self.prediction_layer(Q, M2, a_embedding, is_train=is_train, is_argmax=is_argmax)
         return loss

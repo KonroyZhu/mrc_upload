@@ -5,7 +5,6 @@ import time
 
 import numpy as np
 import torch
-from torch import nn
 
 from com.train_utils import train, test, load_t_d, train_main
 from com.utils import shuffle_data, padding, pad_answer, get_model_parameters
@@ -47,12 +46,7 @@ if __name__ == '__main__':
     # model = MwAN_full(opts, embedding_matrix)  # 16821760
     print('Model total parameters:', get_model_parameters(model))
     if torch.cuda.is_available():
-        print("Using cuda")
         model.cuda()
-    if torch.cuda.device_count() > 1:
-        print("Using ", torch.cuda.device_count(), "GPUs!")
-        model = nn.DataParallel(model)
-        
     # optimizer = torch.optim.Adamax(model.parameters())
     optimizer = torch.optim.Adam(lr=1e-4, betas=(0.8, 0.999), eps=1e-8, weight_decay=1e-7, params=model.parameters())
 
