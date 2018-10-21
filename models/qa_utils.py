@@ -110,7 +110,7 @@ class SelfAttention(nn.Module):
 
 
 class LayerNorm_Buffer(nn.Module):
-    def __init__(self, in_ch, max_length=512):
+    def __init__(self, max_length=512):
         super().__init__()
         normalized_shape = [max_length, max_length]
         weight = nn.Parameter(torch.Tensor(*normalized_shape))
@@ -141,14 +141,14 @@ class Encoder_Block(nn.Module):
         self.dropout = dropout
         self.num_conv = conv_num
         self.position_encoder = PosEncoder(dropout=dropout, d_model=in_channels)
-        self.norm_begin = LayerNorm_Buffer(in_channels)
+        self.norm_begin = LayerNorm_Buffer()
         self.convs = nn.ModuleList(
             [nn.Conv1d(in_channels=in_channels, out_channels=in_channels, padding=k // 2, kernel_size=k)
              for _ in range(conv_num)])  # t + 2*pad//2 - (k-1) (pad=k//2保证输出一致)
-        self.norms = nn.ModuleList([LayerNorm_Buffer(in_channels)
+        self.norms = nn.ModuleList([LayerNorm_Buffer()
                                     for _ in range(conv_num)])
         self.self_att = SelfAttention(in_channels, num_header)
-        self.norm_end = LayerNorm_Buffer(in_channels)
+        self.norm_end = LayerNorm_Buffer()
         self.full_connect = nn.Linear(in_channels, in_channels, bias=True)
 
     def forward(self, x):

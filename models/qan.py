@@ -25,11 +25,11 @@ class QAN(nn.Module):  # param: 16821760
             self.embedding = nn.Embedding(vocab_size + 1, embedding_dim=embedding_size)
             self.embedding.from_pretrained(embedding, freeze=False)  # TODO:斟酌一下要不要freeze
 
-        self.a_emb_wrap = Emb_Wrapper(layer_num=2, hidden_size=encoder_size, emb_dim=embedding_size)
+        self.a_emb_wrap = Emb_Wrapper(layer_num=2, hidden_size=embedding_size, emb_dim=embedding_size)
         self.q_emb_wrap = Emb_Wrapper(layer_num=2, hidden_size=encoder_size, emb_dim=embedding_size)
         self.p_emb_wrap = Emb_Wrapper(layer_num=2, hidden_size=encoder_size, emb_dim=embedding_size)
 
-        self.a_encoder = Encoder_Block(conv_num=4, in_channels=encoder_size, k=7, dropout=self.drop_out)
+        self.a_encoder = Encoder_Block(conv_num=4, in_channels=embedding_size, k=7, dropout=self.drop_out)
         self.q_encoder = Encoder_Block(conv_num=4, in_channels=encoder_size, k=7, dropout=self.drop_out)
         self.d_encoder = Encoder_Block(conv_num=4, in_channels=encoder_size, k=7, dropout=self.drop_out)
 
@@ -44,7 +44,7 @@ class QAN(nn.Module):  # param: 16821760
         self.model_enc_blks = nn.ModuleList([encoder_block] * 7)  # 7 个 encoder block
 
         self.prediction_layer = Pred_Layer(self.opts)
-        self.initiation()
+        self.inititiona()
 
     def initiation(self):
         for module in self.modules():
@@ -81,7 +81,7 @@ class QAN(nn.Module):  # param: 16821760
         for enc in self.model_enc_blks:  # 7个
             M1 = enc(M1)
         M2 = M1.transpose(1,2)
-        Q = self.q_conv_projector(Q.transpose(1, 2)).transpose(1, 2)
+        Q = self.q_conv_projector(Q.transpose(1, 2)).transpose(1, 2) # 可以考虑一开始就project 到2h维
         loss = self.prediction_layer(Q, M2, a_embedding, is_train=is_train, is_argmax=is_argmax)
         return loss
 

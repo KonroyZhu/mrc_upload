@@ -15,10 +15,11 @@ from models.phn import PHN
 
 # from preprocess.get_emb import get_emb_mat
 from models.qa_dcn import QA_DCN
+from models.qa_rnn import QA_RNN
 from models.qan import QAN
 
-model_name = "mwan"
-desc = "300"
+model_name = "qa"
+desc = "_emb0.1"
 model_path = 'net/' + model_name + desc + '.pt'
 record_path = 'net/' + model_name + desc + '.txt'
 
@@ -34,18 +35,19 @@ if __name__ == '__main__':
     opts = json.load(open("models/config.json"))
     train_data, dev_data = load_t_d()
     # embedding_matrix = None
-    embedding_matrix = torch.FloatTensor(get_emb_mat("data/emb/id2v.pkl"))/5
+    embedding_matrix = torch.FloatTensor(get_emb_mat("data/emb/id2v.pkl"))/10
 
     # model = DCN(opts,embedding_matrix)
     # model=PHN(opts,embedding_matrix) # 13406161
     # model=QA_DCN(opts,embedding_matrix)  # 16412800
     # model = QAN(opts, embedding_matrix)  # 16643073
+    model =QA_RNN(opts,embedding_matrix)
     # model =Mw_f_ori(opts,embedding_matrix)
-    model = MwAN_full(opts, embedding_matrix)  # 16821760
+    # model = MwAN_full(opts, embedding_matrix)  # 16821760
     print('Model total parameters:', get_model_parameters(model))
     if torch.cuda.is_available():
         model.cuda()
-    optimizer = torch.optim.Adamax(model.parameters())
+    # optimizer = torch.optim.Adamax(model.parameters())
     optimizer = torch.optim.Adam(lr=1e-4, betas=(0.8, 0.999), eps=1e-8, weight_decay=1e-7, params=model.parameters())
 
     best = 0.0
