@@ -42,9 +42,10 @@ class QAN(nn.Module):  # param: 16821760
                                       kernel_size=5)
         encoder_block = Encoder_Block(conv_num=2, in_channels=2*encoder_size, k=5)
         self.model_enc_blks = nn.ModuleList([encoder_block] * 7)  # 7 个 encoder block
+        self.model_enc=nn.GRU(input_size=2*encoder_size,hidden_size=encoder_size,bidirectional=True,bias=True,dropout=self.drop_out)  #尝试替换encoderblock
 
         self.prediction_layer = Pred_Layer(self.opts)
-        self.inititiona()
+        self.initiation()
 
     def initiation(self):
         for module in self.modules():
@@ -77,11 +78,14 @@ class QAN(nn.Module):  # param: 16821760
 
         # QP Attention
         q_p_att=self.q_p_attention(P,Q) # (b,p,4h)
-        M1 = self.qp_projector(q_p_att.transpose(1, 2))
+        # """       ccl
+        M1 = self.qp_projector(q_p_att.transpose(1, 2)).transpose(1,2)
+        M2,_ = self.model_enc(M1)     # 尝试替换encoder_block
+        """            ccc
         for enc in self.model_enc_blks:  # 7个
             M1 = enc(M1)
         M2 = M1.transpose(1,2)
+        # """
         Q = self.q_conv_projector(Q.transpose(1, 2)).transpose(1, 2) # 可以考虑一开始就project 到2h维
         loss = self.prediction_layer(Q, M2, a_embedding, is_train=is_train, is_argmax=is_argmax)
         return loss
-

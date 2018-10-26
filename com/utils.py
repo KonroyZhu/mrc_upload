@@ -107,5 +107,15 @@ def pad_wrong_answer(answer_list):
 
 def to_onehot(x, n_class=3):
     values = np.array(x)
-    b=np.eye(n_class)[values]
+    b=np.eye(n_class)[int(values)]
     return b
+
+def load_t_d(dt_path="data/"):
+    with open(dt_path + 'train.pickle', 'rb') as f:
+        train_data = pickle.load(f)
+    with open(dt_path + 'dev.pickle', 'rb') as f:
+        dev_data = pickle.load(f)
+    dev_data = sorted(dev_data, key=lambda x: len(x[1]))
+
+    print('train data size {:d}, dev data size {:d}'.format(len(train_data), len(dev_data)))
+    return train_data, dev_data

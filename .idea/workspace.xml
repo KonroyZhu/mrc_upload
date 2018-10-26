@@ -2,11 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66b98813-e9db-4777-adb0-7860408016cf" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/interface.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/bert/bert.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/bert/bert_lm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/bert/data_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/bert/prepro.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/bert/train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/bert/transformer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/dcn_mwan.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/qa_base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/qa_pos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/qa_ps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/qa_self.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/qa_selfmod.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submit/9th-submit.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/train_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/train_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ensm/pkl_ensemble.py" beforeDir="false" afterPath="$PROJECT_DIR$/ensm/pkl_ensemble.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ensm/score_on_dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/ensm/score_on_dev.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inter.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface2.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/models/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/models/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/phn.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/phn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/pred_layer.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/pred_layer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/qa_rnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/qa_rnn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train2.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/qa_dcn.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/qa_dcn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/qa_rnn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/qa_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/qa_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/qan.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/qan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/retrain.py" beforeDir="false" afterPath="$PROJECT_DIR$/retrain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submit/8th-submit.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_T.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/调参记录.xls" beforeDir="false" afterPath="$PROJECT_DIR$/调参记录.xls" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,41 +44,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/train.py">
+      <file leaf-file-name="data_utils.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/bert/data_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="qa_rnn.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/models/qa_rnn.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+            <state relative-caret-position="1411">
+              <caret line="92" column="9" lean-forward="true" selection-start-line="92" selection-start-column="9" selection-end-line="95" selection-end-column="25" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pred_layer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/pred_layer.py">
+      <file leaf-file-name="prepro.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/bert/prepro.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="88">
-              <caret line="21" column="101" selection-start-line="21" selection-start-column="101" selection-end-line="21" selection-end-column="101" />
+              <caret line="49" column="63" selection-start-line="49" selection-start-column="63" selection-end-line="49" selection-end-column="63" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,36 +79,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>json</find>
-      <find>args.batch_size</find>
-      <find>args</find>
-      <find>max</find>
-      <find>linear</find>
-      <find>cuda()</find>
-      <find>cuda</find>
-      <find>10</find>
-      <find>DepthwiseSe</find>
-      <find>in_ch=</find>
-      <find>out_ch=</find>
-      <find>DepthwiseSeparableConv</find>
-      <find>k=</find>
-      <find>Norm</find>
-      <find>length</find>
-      <find>qqq</find>
-      <find>mask</find>
-      <find>projec</find>
-      <find>Wq</find>
-      <find>-1</find>
-      <find>highway</find>
-      <find>D</find>
-      <find>W_Q</find>
-      <find>cat</find>
-      <find>in_</find>
-      <find>model_enc_blks</find>
-      <find>att</find>
-      <find>relu</find>
       <find>a_att</find>
       <find>LayerNorm_Buffer</find>
+      <find>k=</find>
+      <find>RNN</find>
+      <find>float</find>
+      <find>MLP</find>
+      <find>numpy</find>
+      <find>dep_info</find>
+      <find>Float</find>
+      <find>position_Q</find>
+      <find>weight</find>
+      <find>position_t</find>
+      <find>cuda</find>
+      <find>&quot;batch&quot;</find>
+      <find>print(</find>
+      <find />
+      <find>hp</find>
+      <find>hq</find>
+      <find>None</find>
+      <find>submi</find>
+      <find>self.opts[&quot;emb_size&quot;]</find>
+      <find>self.opts[&quot;hidden_size&quot;]</find>
+      <find>shape</find>
+      <find>self.po</find>
+      <find>self.</find>
+      <find>is_next</find>
+      <find>96974</find>
+      <find>96973</find>
+      <find>axis</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -105,44 +117,64 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/train_mwf.py" />
-        <option value="$PROJECT_DIR$/interfaces.py" />
-        <option value="$PROJECT_DIR$/models/mwan_full.py" />
-        <option value="$PROJECT_DIR$/train_mw_f.py" />
-        <option value="$PROJECT_DIR$/train_mw.py" />
-        <option value="$PROJECT_DIR$/com/train_utils.py" />
-        <option value="$PROJECT_DIR$/models/phn.py" />
-        <option value="$PROJECT_DIR$/retrain2.py" />
-        <option value="$PROJECT_DIR$/models/mw_f_ori.py" />
-        <option value="$PROJECT_DIR$/retrain.py" />
-        <option value="$PROJECT_DIR$/models/tensor_test.py" />
-        <option value="$PROJECT_DIR$/models/qa_net.py" />
-        <option value="$PROJECT_DIR$/models/qa_dcn.py" />
-        <option value="$PROJECT_DIR$/models/dcn.py" />
-        <option value="$PROJECT_DIR$/pkl_records/score_on_dev.py" />
-        <option value="$PROJECT_DIR$/interface1.py" />
-        <option value="$PROJECT_DIR$/interface.py" />
-        <option value="$PROJECT_DIR$/pkl_records/argmax/convert.py" />
         <option value="$PROJECT_DIR$/interface2.py" />
+        <option value="$PROJECT_DIR$/train_qr.py" />
+        <option value="$PROJECT_DIR$/retrain.py" />
+        <option value="$PROJECT_DIR$/retrain_qr.py" />
+        <option value="$PROJECT_DIR$/models/qa_rnn.py" />
+        <option value="$PROJECT_DIR$/train_ls.py" />
+        <option value="$PROJECT_DIR$/train.py" />
+        <option value="$PROJECT_DIR$/models/qa_dcn.py" />
+        <option value="$PROJECT_DIR$/train_ccl.py" />
+        <option value="$PROJECT_DIR$/models/qan.py" />
+        <option value="$PROJECT_DIR$/train_qa_none.py" />
+        <option value="$PROJECT_DIR$/models/qa_none.py" />
+        <option value="$PROJECT_DIR$/models/qa_utils.py" />
+        <option value="$PROJECT_DIR$/models/qa_base.py" />
+        <option value="$PROJECT_DIR$/train_pos.py" />
+        <option value="$PROJECT_DIR$/train_base.py" />
+        <option value="$PROJECT_DIR$/train_phn.py" />
+        <option value="$PROJECT_DIR$/models/phn.py" />
+        <option value="$PROJECT_DIR$/models/qa_pos.py" />
+        <option value="$PROJECT_DIR$/train_ps.py" />
+        <option value="$PROJECT_DIR$/train_selM.py" />
+        <option value="$PROJECT_DIR$/train_sel.py" />
+        <option value="$PROJECT_DIR$/models/qa_ps.py" />
+        <option value="$PROJECT_DIR$/models/qa_self.py" />
+        <option value="$PROJECT_DIR$/models/dcn_mwan.py" />
+        <option value="$PROJECT_DIR$/train_dcn.py" />
+        <option value="$PROJECT_DIR$/train_dm.py" />
+        <option value="$PROJECT_DIR$/train_mwan.py" />
+        <option value="$PROJECT_DIR$/models/config.json" />
+        <option value="$PROJECT_DIR$/train_Mwan.py" />
+        <option value="$PROJECT_DIR$/models/qa_selfmod.py" />
+        <option value="$PROJECT_DIR$/train_self.py" />
+        <option value="$PROJECT_DIR$/interface.py" />
+        <option value="$PROJECT_DIR$/interface1.py" />
         <option value="$PROJECT_DIR$/ensm/score_on_dev.py" />
         <option value="$PROJECT_DIR$/ensm/pkl_ensemble.py" />
-        <option value="$PROJECT_DIR$/train1.py" />
-        <option value="$PROJECT_DIR$/train.py" />
-        <option value="$PROJECT_DIR$/models/mwan_f.py" />
-        <option value="$PROJECT_DIR$/models/qa_utils.py" />
-        <option value="$PROJECT_DIR$/models/qan.py" />
-        <option value="$PROJECT_DIR$/train2.py" />
-        <option value="$PROJECT_DIR$/models/config.json" />
         <option value="$PROJECT_DIR$/models/pred_layer.py" />
-        <option value="$PROJECT_DIR$/models/qa_rnn.py" />
+        <option value="$PROJECT_DIR$/models/bert/mwan_t.py" />
+        <option value="$PROJECT_DIR$/models/bert/transformer.py" />
+        <option value="$PROJECT_DIR$/models/bert/bert.py" />
+        <option value="$PROJECT_DIR$/inter.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/models/bert/vocab.py" />
+        <option value="$PROJECT_DIR$/com/train_utils.py" />
+        <option value="$PROJECT_DIR$/train_T.py" />
+        <option value="$PROJECT_DIR$/models/bert/utils.py" />
+        <option value="$PROJECT_DIR$/models/bert/LM.py" />
+        <option value="$PROJECT_DIR$/models/bert/data_utils.py" />
+        <option value="$PROJECT_DIR$/com/utils.py" />
+        <option value="$PROJECT_DIR$/models/bert/prepro.py" />
+        <option value="$PROJECT_DIR$/models/bert/train.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="26" />
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="620" />
     <option name="width" value="1116" />
-    <option name="height" value="705" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -150,6 +182,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -166,23 +199,24 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../torch_mrc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Documents\konroy\Du\AIChallenger\阅读理解\MRC3.0\mrc_upload\pkl_records\0" />
       <recent name="C:\Users\Administrator\Documents\konroy\Du\AIChallenger\阅读理解\MRC3.0\mrc_upload\pkl_records" />
       <recent name="C:\Users\Administrator\Documents\konroy\Du\AIChallenger\阅读理解\MRC3.0\mrc_upload\pkl_records\argmax" />
       <recent name="C:\Users\Administrator\Documents\konroy\Du\AIChallenger\阅读理解\MRC3.0\mrc_upload\ensm" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Documents\konroy\Du\AIChallenger\阅读理解\MRC3.0\mrc_upload\pkl_records\1" />
       <recent name="C:\Users\Administrator\Documents\konroy\Du\AIChallenger\阅读理解\MRC3.0\mrc_upload\pkl_records" />
-      <recent name="C:\Users\Administrator\Documents\konroy\Du\AIChallenger\阅读理解\MRC3.0\mrc_upload" />
       <recent name="C:\Users\Administrator\Documents\konroy\Du\AIChallenger\阅读理解\MRC3.0\mrc_upload\models" />
+      <recent name="C:\Users\Administrator\Documents\konroy\Du\AIChallenger\阅读理解\MRC3.0\mrc_upload" />
       <recent name="C:\Users\Administrator\Documents\konroy\Du\AIChallenger\阅读理解\MRC3.0\mrc_upload\net" />
     </key>
   </component>
@@ -198,8 +232,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.train (1)">
-    <configuration name="convert" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.train">
+    <configuration name="LM" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="mrc_upload" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -207,17 +241,35 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pkl_records/argmax" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models/bert" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Administrator\Documents\konroy\Du\AIChallenger\阅读理解\MRC3.0\mrc_upload\pkl_records\argmax\2onehot.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Administrator\Documents\konroy\Du\AIChallenger\阅读理解\MRC3.0\mrc_upload\models\bert\bert_lm.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="interface1 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="prepro" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="mrc_upload" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models/bert" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models/bert/prepro.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="mrc_upload" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -229,43 +281,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Administrator\Documents\konroy\Du\AIChallenger\阅读理解\MRC3.0\mrc_upload\interface2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="pkl_ensemble" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="mrc_upload" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ensm" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ensm/pkl_ensemble.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="train (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="mrc_upload" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Administrator\Documents\konroy\Du\AIChallenger\阅读理解\MRC3.0\mrc_upload\train.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -279,30 +295,48 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models/bert" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Administrator\Documents\konroy\Du\AIChallenger\阅读理解\MRC3.0\mrc_upload\train.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models/bert/train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="mrc_upload" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models/bert" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Administrator\Documents\konroy\Du\AIChallenger\阅读理解\MRC3.0\mrc_upload\models\bert\data_utils.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.pkl_ensemble" />
-      <item itemvalue="Python.interface1 (1)" />
-      <item itemvalue="Python.convert" />
+      <item itemvalue="Python.LM" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.prepro" />
       <item itemvalue="Python.train" />
-      <item itemvalue="Python.train (1)" />
+      <item itemvalue="Python.utils" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.train (1)" />
         <item itemvalue="Python.train" />
-        <item itemvalue="Python.pkl_ensemble" />
-        <item itemvalue="Python.convert" />
-        <item itemvalue="Python.interface1 (1)" />
+        <item itemvalue="Python.prepro" />
+        <item itemvalue="Python.LM" />
+        <item itemvalue="Python.utils" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -322,40 +356,40 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19399707" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1749634" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32750398" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.48489666" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6070288" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.399361" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3243243" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19399707" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6263911" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1749634" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.55910546" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3243243" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32750398" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.399361" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
@@ -369,268 +403,25 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/com/train_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/tensor_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/pred_layer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="36" column="102" selection-start-line="36" selection-start-column="102" selection-end-line="36" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="51" column="114" selection-start-line="51" selection-start-column="114" selection-end-line="51" selection-end-column="114" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
-          <folding>
-            <element signature="e#1#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train.py" />
-    <entry file="file://C:/Program Files/Anaconda3/envs/torch/Lib/site-packages/numpy/core/fromnumeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="2778" column="42" selection-start-line="2778" selection-start-column="30" selection-end-line="2778" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/net/mwan_fd0.5.txt" />
-    <entry file="file://C:/Program Files/Anaconda3/envs/torch/Lib/site-packages/torch/_tensor_str.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4642">
-          <caret line="215" selection-start-line="215" selection-end-line="215" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/phn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="48" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Anaconda3/envs/torch/Lib/site-packages/torch/nn/functional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="1310" column="17" lean-forward="true" selection-start-line="1310" selection-start-column="17" selection-end-line="1310" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Anaconda3/envs/torch/Lib/site-packages/torch/nn/modules/normalization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="128" column="50" lean-forward="true" selection-start-line="128" selection-start-column="11" selection-end-line="128" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Anaconda3/envs/torch/Lib/site-packages/torch/tensor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-792">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/tensor_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Anaconda3/envs/torch/Lib/site-packages/torch/nn/modules/container.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="117" column="8" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Anaconda3/envs/torch/Lib/site-packages/torch/nn/modules/conv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="163" column="8" selection-start-line="163" selection-start-column="8" selection-end-line="163" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Anaconda3/envs/torch/Lib/site-packages/torch/optim/adamax.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="63" column="65" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkl_records/mwan_fd0.5.dev.pkl">
+    <entry file="file://$PROJECT_DIR$/pkl_records/0/dcn_emb.testa.pkl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkl_records/.gitignore">
+    <entry file="file://$PROJECT_DIR$/pkl_records/0/dcnd0.5.testa.pkl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/retrain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/qa_dcn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="992">
-          <caret line="96" column="67" selection-start-line="96" selection-start-column="67" selection-end-line="96" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ensm/ensmble_pred.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1100">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkl_records/last_ensemble.testa.pkl">
+    <entry file="file://$PROJECT_DIR$/pkl_records/0/dcn.testa.pkl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/mw_f_ori.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1848">
-          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/dcn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1384">
-          <caret line="33" column="67" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkl_records/dcn.dev.pkl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/submit/8th-submit.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkl_records/dcn_emb.testa.pkl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkl_records/dcnd0.5.testa.pkl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkl_records/dcn.testa.pkl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkl_records/qad0.3.dev.pkl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pkl_records/qad0.3.dev.pkl" />
     <entry file="file://$PROJECT_DIR$/pkl_records/2onehot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkl_records/mwan_fd0.5.testa.pkl">
+    <entry file="file://$PROJECT_DIR$/pkl_records/0/mwan_fd0.5.testa.pkl">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="81" column="49" selection-start-line="81" selection-start-column="49" selection-end-line="81" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ensm/score_on_dev.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ensm/pkl_ensemble.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="83" column="21" lean-forward="true" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://C:/Program Files/Anaconda3/envs/torch/Lib/site-packages/torch/optim/adam.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -653,36 +444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/train_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/qan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="84" selection-start-line="84" selection-end-line="85" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/qa_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="112" column="8" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files/Anaconda3/envs/torch/Lib/site-packages/torch/nn/modules/module.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -690,43 +451,269 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-1986007543/numpy/random/mtrand.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="2130" column="4" selection-start-line="2130" selection-start-column="4" selection-end-line="2130" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retrain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="28" lean-forward="true" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retrain_qr.py" />
+    <entry file="file://$PROJECT_DIR$/models/qa_rnn.py" />
+    <entry file="file://$PROJECT_DIR$/models/qa_dcn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="103" column="19" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/qan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/qa_pos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/phn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="97" column="13" lean-forward="true" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/qa_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/qa_ps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="65" column="28" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/dcn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="10" column="35" lean-forward="true" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/qa_none.py" />
+    <entry file="file://$PROJECT_DIR$/models/qa_selfmod.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/qa_self.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkl_records/ensemble0.dev.pkl" />
+    <entry file="file://$PROJECT_DIR$/pkl_records/1/ensemble0.dev.pkl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkl_records/1/ensemble0.testa.pkl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ensm/score_on_dev.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/mwan_f.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="88" selection-end-column="45" />
+        <state relative-caret-position="1848">
+          <caret line="89" column="32" selection-end-line="165" selection-end-column="19" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train.py">
+    <entry file="file://$PROJECT_DIR$/ensm/pkl_ensemble.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        <state relative-caret-position="1584">
+          <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/pred_layer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="21" column="101" selection-start-line="21" selection-start-column="101" selection-end-line="21" selection-end-column="101" />
+        <state relative-caret-position="352">
+          <caret line="21" column="96" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="96" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/qa_rnn.py">
+    <entry file="file://$PROJECT_DIR$/models/bert/mwan_t.py" />
+    <entry file="file://$PROJECT_DIR$/models/qa_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+        <state relative-caret-position="770">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/bert/transformer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2290">
+          <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/bert/vocab.py" />
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/preprocess.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/submit/10th-submit.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18717" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/bert/bert.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/dcn_mwan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="3" selection-end-column="36" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Anaconda3/envs/torch/Lib/site-packages/torch/nn/modules/loss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="193" column="8" selection-start-line="193" selection-start-column="8" selection-end-line="193" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-1986007543/numpy/core/multiarray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-695">
+          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/bert/prepro.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="49" column="63" selection-start-line="49" selection-start-column="63" selection-end-line="49" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_T.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="66" column="9" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/bert/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-312">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/bert/bert_lm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="48" column="26" lean-forward="true" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/train_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-173">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/bert/data_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="92" column="9" lean-forward="true" selection-start-line="92" selection-start-column="9" selection-end-line="95" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>

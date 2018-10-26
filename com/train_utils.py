@@ -2,6 +2,7 @@ import json
 import pickle
 import time
 
+import numpy as np
 import torch
 
 from com.utils import padding, pad_answer, shuffle_data
@@ -74,17 +75,6 @@ def test(net, valid_data):
     return r * 100.0 / a
 
 
-def load_t_d():
-    with open(opts["data"] + 'train.pickle', 'rb') as f:
-        train_data = pickle.load(f)
-    with open(opts["data"] + 'dev.pickle', 'rb') as f:
-        dev_data = pickle.load(f)
-    dev_data = sorted(dev_data, key=lambda x: len(x[1]))
-
-    print('train data size {:d}, dev data size {:d}'.format(len(train_data), len(dev_data)))
-    return train_data, dev_data
-
-
 def train_main(model,train_data,dev_data,optimizer,best,best_epoch,model_path,record_path):
     for epoch in range(opts["epoch"]):
         train(epoch, model, train_data, optimizer, best, best_epoch)
@@ -98,3 +88,14 @@ def train_main(model,train_data,dev_data,optimizer,best,best_epoch,model_path,re
                 f.write("best score: {} on epoch {}\n".format(best, best_epoch))
 
         print('epcoh {:d} dev acc is {:f}, best dev acc {:f}'.format(epoch, acc, best))
+
+def ans_shuffle(answer):
+    """
+    将answer下标打乱，防止网络学习到正确下标为零的特征
+    """
+    batch =answer.shape[0]
+    idx_s=np.random.randint(0,2,size=batch) # batch size
+    idx_0=np.zeros_like(idx_s)
+    placeholder=np.arange(0,batch) # batch size
+    answer[placeholder,idx_s],answer[placeholder,idx_0] =answer[placeholder,idx_0],answer[placeholder,idx_s]
+    return answer,idx_s

@@ -229,40 +229,31 @@ class QA_Net(nn.Module):  # param:
         self.q_conv_project = nn.Conv1d(in_channels=embedding_size, out_channels=encoder_size, kernel_size=1)
         self.p_conv_project = nn.Conv1d(in_channels=embedding_size, out_channels=encoder_size, kernel_size=1)
         self.a_conv_project = nn.Conv1d(in_channels=embedding_size, out_channels=embedding_size, kernel_size=1)
-
         # self.a_conv_project = nn.Conv1d(in_channels=embedding_size, out_channels=encoder_size, kernel_size=1)
         self.q_highway = Highway(layer_num=2, hidden_size=encoder_size)
         self.p_highway = Highway(layer_num=2, hidden_size=encoder_size)
         self.a_highway = Highway(layer_num=2, hidden_size=embedding_size)
-
         self.p_encoder = Encoder_Block(conv_num=4, in_channels=encoder_size, k=7)
         self.q_encoder = Encoder_Block(conv_num=4, in_channels=encoder_size, k=7)
         self.a_encoder = Encoder_Block(conv_num=4, in_channels=embedding_size, k=7)
-
         # answer transform
         self.a_attention = nn.Linear(embedding_size, 1, bias=False)
-
         # Context-Query Attention
         self.cq_att = CQAttention(encoder_size)
         self.x_conv_project = nn.Conv1d(in_channels=4 * encoder_size, out_channels=encoder_size, padding=5 // 2,
                                         kernel_size=5)
-
         encoder_block = Encoder_Block(conv_num=2, in_channels=encoder_size, k=5)
         self.model_enc_blks = nn.ModuleList([encoder_block] * 7)  # 7 个 encoder block
-
         # RESIZE
         self.q_encoder_resize = nn.Conv1d(in_channels=encoder_size, out_channels=2 * encoder_size, kernel_size=5)
         self.M2_resize = nn.Conv1d(in_channels=encoder_size, out_channels=2 * encoder_size, kernel_size=5)
         self.predictio_layer = Pred_Layer(options)
-
         self.initiation()
-
     def initiation(self):
         for module in self.modules():
             if isinstance(module, nn.Linear):  # 用0.1来限制，初始化所有nn.Linear的权重
                 print("initializing Linear:", module)
                 nn.init.xavier_uniform_(module.weight, 0.1)
-
     def forward(self, inputs):
         [query, passage, answer, ids, is_train, is_argmax] = inputs
         # Embedding
@@ -270,25 +261,20 @@ class QA_Net(nn.Module):  # param:
         p_embedding = self.embedding(passage)
         a_embeddings = self.embedding(answer)
         a_embeddings = a_embeddings.view(-1, answer.size(1), self.emb_size)  # (3b,a,h)
-
         print("p", p_embedding)
         print("q", q_embedding)
         print("a", a_embeddings)
-
         q_conv_projection = self.q_conv_project(q_embedding.transpose(1, 2)).transpose(1, 2)  # (b,q,emb)-> (b,q,h)
         p_conv_projection = self.p_conv_project(p_embedding.transpose(1, 2)).transpose(1, 2)  # (b,q,emb)-> (b,p,h)
         a_conv_projection = self.a_conv_project(a_embeddings.transpose(1, 2)).transpose(1,
                                                                                         2)  # (b,q,emb)-> (3b,a,emb) FIXME
-
         # # two-layer highway network
         q_highway = self.q_highway(q_conv_projection)  # (b,q,h)
         p_highway = self.p_highway(p_conv_projection)  # (b,p,h)
         a_highway = self.a_highway(a_conv_projection)  # (3b,a,emb)
-
         p_encoder = self.p_encoder(p_highway.transpose(1, 2)).transpose(1, 2)
         q_encoder = self.q_encoder(q_highway.transpose(1, 2)).transpose(1, 2)
         a_encoder = self.a_encoder(a_highway.transpose(1, 2)).transpose(1, 2)
-
         # #print("p/q_encoder: {}".format(p_encoder.shape))
         # #print("a_encoder: {}".format(a_encoder.shape))
         # a score
@@ -296,10 +282,8 @@ class QA_Net(nn.Module):  # param:
         a_output = a_score.transpose(2, 1).bmm(a_encoder).squeeze()  # (3b,1,a) bmm (3b,a,h)-> (3b,1,h)
         print(a_output.shape)
         a_embedding = a_output.view(answer.size(0), 3, a_encoder.size(2))  # (b,3,h)
-
         X = self.cq_att(p_encoder, q_encoder)
         # print("CQ(X): {}".format(X)) # (b.q.4h)
-
         M1 = self.x_conv_project(X.transpose(1, 2))  # (b,h,q)
         for enc in self.model_enc_blks:  # 7个
             M1 = enc(M1)

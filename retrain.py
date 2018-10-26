@@ -6,7 +6,7 @@ import torch
 
 from com.train_utils import test, train, load_t_d, train_main
 
-model_name = "mwan_f"
+model_name = "qa_emb0.1"
 desc = ""
 model_path = 'net/' + model_name + desc + '.pt'
 record_path = 'net/' + model_name + desc + '.txt'

@@ -19,7 +19,7 @@ class Pred_Layer(nn.Module):
         self.prediction = nn.Linear(2 * opts["hidden_size"], opts["emb_size"], bias=False)
 
 
-    def forward(self, q_encoder,aggregation,a_embedding,is_train=True,is_argmax=True,print_score=True):
+    def forward(self, q_encoder,aggregation,a_embedding,is_train=True,is_argmax=True,print_score=False,labels=None):
         # q_encoder: (b,q,2h)
         # aggregation: (b,p,2h)
         # a_embedding: (b,3,h)
@@ -42,10 +42,17 @@ class Pred_Layer(nn.Module):
                 return score.argmax(1)
             else:
                 return score
+        if labels is None:
+            correct_answer = score[:, 0]
+        else:
+            assert  len(labels) == score.shape[0] #FIXME: 取score中的lables索引,labels 长度为batcch
+            placeholder = np.arange(0,len(labels))
+            correct_answer = score[placeholder,labels]
+
         if self.max_margin:
             """we take the maximum over i so that  we  are  ranking  the  correct  answer  over  the  best-ranked
                     incorrect answer (of which there are three) """
-            correct = score[:, 0]
+            correct = correct_answer
             m_score = torch.max(score, dim=1)[0]
             # #print(m_score.shape)
             u = 1.5  # score0 与 错误得分的间距
@@ -54,7 +61,7 @@ class Pred_Layer(nn.Module):
             zeros = torch.FloatTensor(np.zeros(shape=m_score.size(0)))  # fixme
 
             L = torch.max(zeros, margin.cpu())
-            loss = L.mean().cuda()  # 最大化score0与错误选项的间距
+            loss = L.mean()  # 最大化score0与错误选项的间距
         else:
-            loss = -torch.log(score[:, 0]).mean() # 原loss最大化score[0]的得分
+            loss = -torch.log(correct_answer).mean()  # 原loss最大化score[0]的得分
         return loss
